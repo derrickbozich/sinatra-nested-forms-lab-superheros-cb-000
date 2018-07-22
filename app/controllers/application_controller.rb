@@ -21,8 +21,8 @@ class App < Sinatra::Base
 
       @superheroes = Superhero.all
 
-      binding.pry
-      # erb :'../views/team'
+      
+      erb :'../views/team'
 
     end
 
