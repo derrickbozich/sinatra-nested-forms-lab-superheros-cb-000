@@ -15,8 +15,8 @@ class App < Sinatra::Base
 
 
 
-      params[:team][:superheroes].each_with_index do |details, index|
-        Superhero.new(details[index])
+      params[:team][:superheroes].each do |details|
+        Superhero.new(details)
       end
 
       @superheroes = Superhero.all
