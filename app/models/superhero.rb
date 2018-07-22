@@ -2,9 +2,9 @@ class Superhero
   attr_accessor :name, :power, :bio
 
   def initialize(params)
-    @name = params[:team][:superheroes][:name]
-    @power = params[:team][:superheroes][:power]
-    @bio = params[:team][:superheroes][:bio]
+    @name = params[:name]
+    @power = params[:power]
+    @bio = params[:bio]
     @@all << self
   end
 
