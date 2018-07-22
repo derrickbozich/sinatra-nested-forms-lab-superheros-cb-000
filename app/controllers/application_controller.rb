@@ -8,7 +8,11 @@ class App < Sinatra::Base
       erb :'../views/index'
     end
 
-    
+    post '/teams' do
+      erb :'../views/team'
+    end
+
+
 
 
 end
