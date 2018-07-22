@@ -13,13 +13,15 @@ class App < Sinatra::Base
     post '/teams' do
       @team = Team.new(params[:team][:name], params[:team][:motto])
 
+      binding.pry
+
       params[:team][:superheroes].each do |details|
         Superhero.new(details)
       end
 
       @superheroes = Superhero.all
       # erb :'../views/team'
-      binding.pry
+      
     end
 
 
