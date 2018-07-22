@@ -15,13 +15,13 @@ class App < Sinatra::Base
 
       binding.pry
 
-      params[:team][:superheroes].each do |details|
-        Superhero.new(details)
+      params[:team][:superheroes].each_with_index do |details, index|
+        Superhero.new(details[index])
       end
 
       @superheroes = Superhero.all
       # erb :'../views/team'
-      
+
     end
 
 
